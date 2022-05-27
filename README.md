@@ -1,3 +1,14 @@
+# Spero61's Portfolio Website
+
+This project is to build a personal portfolio website.
+
+### Libraries used
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [React Leaflet](https://react-leaflet.js.org/) - A React components for Leaflet maps
+- [GSAP library](https://greensock.com/) - A JavaScript animation library 
+- [Animate.css](https://animate.style/) - A cross-browser library of CSS animations.
+- [Loaders.css](https://connoratherton.com/loaders) - A pure css loading animations.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
