@@ -1,7 +1,8 @@
+import Sidebar from '../Sidebar';
 import './index.scss';
 
-function Layout() {
-  return <>Moi, Hauska Tavata!</>;
-}
+const Layout = () => (
+  <Sidebar />
+);
 
 export default Layout;
