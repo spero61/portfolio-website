@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import LogoTitle from '../../assets/images/logo-s.png';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
+import Logo from './Logo';
 
 const Home = () => {
   // Using the State Hook: https://reactjs.org/docs/hooks-state.html
@@ -10,15 +11,9 @@ const Home = () => {
   const nameArray = ['u', 'n', 'g'];
   const jobArray = 'web developer'.split('');
 
-  // https://stackoverflow.com/questions/53090432/react-hooks-right-way-to-clear-timeouts-and-intervals
+  // cf. https://stackoverflow.com/questions/53090432/react-hooks-right-way-to-clear-timeouts-and-intervals
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, 4000);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    setTimeout(() => setLetterClass('text-animate-hover'), 4000);
   }, []);
 
   return (
@@ -40,6 +35,7 @@ const Home = () => {
         <h2>Frontend Developer</h2>
         <Link to="/contact" className="flat-button">CONTACT ME</Link>
       </div>
+      <Logo />
     </div>
   );
 };
