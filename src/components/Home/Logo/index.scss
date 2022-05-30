@@ -2,13 +2,16 @@
   z-index: 0;
   width: 400px;
   height: 609px;
-  opacity: 0;
   position: absolute;
   top: 0;
   right: 15%;
   bottom: 0;
   left: auto;
   margin: auto;
+  animation-name: fadeInLogoContainer;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 
   svg {
     width: 100%;
@@ -23,15 +26,40 @@
     right: auto;
     bottom: auto;
     left: 0;
+    opacity: 0;
     margin: auto;
     width: 100%;
-    opacity: 0;
+    transition-delay: 2s;
+    transition: opacity 4s;
     transform: rotateZ(20deg) !important;
     z-index: 1;
+    animation-name: fadeInSolidLogo;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
   }
 }
 
 .svg-container {
   stroke: #ffd700;
   stroke-width: 10;
+}
+
+@keyframes fadeInLogoContainer {
+  0% {
+      opacity: 0.05;
+  }
+  100% {
+      opacity: 0.8;
+   }
+}
+
+@keyframes fadeInSolidLogo {
+  0% {
+      opacity: 0.1;
+  }
+  100% {
+      opacity: 0.7;
+   }
 }

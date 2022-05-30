@@ -1,6 +1,4 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap-trial';
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+import { useRef } from 'react';
 import LogoS from '../../../assets/images/logo-s.png';
 import './index.scss';
 
@@ -8,30 +6,6 @@ const Logo = () => {
   const bgRef = useRef();
   const outlineLogoRef = useRef();
   const solidLogoRef = useRef();
-
-  useEffect(() => {
-    // https://greensock.com/drawsvg/
-    gsap.registerPlugin(DrawSVGPlugin);
-
-    gsap
-      .timeline()
-      .to(bgRef.current, {
-        duration: 3,
-        opacity: 1,
-      });
-
-    gsap.fromTo(
-      solidLogoRef.current,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        delay: 2,
-        duration: 5,
-      },
-    );
-  }, []);
 
   return (
     <div className="logo-container" ref={bgRef}>
