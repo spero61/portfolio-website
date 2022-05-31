@@ -100,3 +100,23 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .top-tag-html,
+  .bottom-tag-html {
+    margin-left: -60px;
+  }
+
+  .about-page {
+    .text-zone {
+      left: 20%;
+      top: 60%;
+      width: 70%;
+    }
+
+    h1 {
+      font-size: 9vw;
+      font-family: 'Coolvetica';
+    }
+  }
+}

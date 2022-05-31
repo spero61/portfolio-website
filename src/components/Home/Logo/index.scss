@@ -48,18 +48,54 @@
 
 @keyframes fadeInLogoContainer {
   0% {
-      opacity: 0.05;
+    opacity: 0.05;
   }
   100% {
-      opacity: 0.8;
-   }
+    opacity: 0.8;
+  }
 }
 
 @keyframes fadeInSolidLogo {
   0% {
-      opacity: 0.1;
+    opacity: 0.1;
   }
   100% {
-      opacity: 0.7;
-   }
+    opacity: 0.7;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-container {
+    top: -10%;
+    right: 10%;
+    left: 48%;
+
+    svg {
+      width: 40%;
+    }
+
+    .solid-logo {
+      width: 40%;
+    }
+  }
+
+  .svg-container {
+    stroke-width: 8;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo-container {
+    top: -30%;
+    right: 20%;
+    left: 25%;
+
+    svg {
+      width: 60%;
+    }
+
+    .solid-logo {
+      width: 60%;
+    }
+  }
 }

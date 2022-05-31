@@ -122,3 +122,11 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    background: #181818;
+    width: 45px;
+    z-index: 2;
+  }
+}

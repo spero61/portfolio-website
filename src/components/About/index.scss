@@ -80,3 +80,10 @@
     transform: rotateX(90deg);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .stage-cube-cont {
+    padding-top: 10%;
+    margin-right: 5vw;
+  }
+}
