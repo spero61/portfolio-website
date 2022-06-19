@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
 .stage-cube-cont {
   width: 50%;
   height: 100%;
@@ -7,6 +9,10 @@
   position: absolute;
   right: 0;
   overflow: hidden;
+}
+
+p.japanese {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
@@ -32,6 +38,8 @@
     align-items: center;
     box-shadow: 0 0 20px 0px lightyellow;
   }
+
+
 
   .face1 {
     transform: translateZ(100px);

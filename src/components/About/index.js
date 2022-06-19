@@ -25,23 +25,17 @@ const About = () => {
             idx={15}
           />
         </h1>
-        <p>
-          Lorem Ipsum on yksinkertaisesti testausteksti,
-          jota tulostus- ja ladontateollisuudet käyttävät.
+        <p className="japanese">
+          HTML, CSS, JavaScript
         </p>
-        <p>
-          Lorem Ipsum on ollut teollisuuden normaali testausteksti jo 1500-luvulta asti,
-          jolloin tuntematon tulostaja otti kaljuunan ja sekoitti sen tehdäkseen esimerkkikirjan.
+        <p className="japanese">
+          Frontend: React, Next.js, Bootstrap, Bulma
         </p>
-        <p>
-          Se ei ole selvinnyt vain viittä vuosisataa,
-          mutta myös loikan elektroniseen kirjoitukseen, jääden suurinpiirtein muuntamattomana.
+        <p className="japanese">
+          Backend: Flask, Node.js, Firebase, MariaDB, PostgreSQL
         </p>
-        <p>
-          Se tuli kuuluisuuteen 1960-luvulla kun Letraset-paperiarkit,
-          joissa oli Lorem Ipsum pätkiä,
-          julkaistiin ja vielä myöhemmin tietokoneen julkistusohjelmissa,
-          kuten Aldus PageMaker joissa oli versioita Lorem Ipsumista.
+        <p className="japanese">
+          その他: C, C++, Lua
         </p>
       </div>
       <div className="stage-cube-cont">
