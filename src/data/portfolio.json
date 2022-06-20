@@ -10,13 +10,13 @@
             "cover": "/portfolio/thumbnail/two.png",
             "title": "Finantial-portfolio",
             "description": "Python, Flask, SQLite3, Chart.js",
-            "url": "http://ec2-3-35-215-235.ap-northeast-2.compute.amazonaws.com/"
+            "url": "https://www.spero61.click"
         },
         {
             "cover": "/portfolio/thumbnail/three.gif",
             "title": "Falling from the sky",
             "description": "Lua, Love2d, love.js",
-            "url": "https://www.spero61.xyz"
+            "url": "http://ffts.spero61.sbs"
         },
         {
             "cover": "/portfolio/thumbnail/four.gif",
