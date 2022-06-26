@@ -6,10 +6,25 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// https://chakra-ui.com/docs/styled-system/css-variables
 const theme = extendTheme({
   fonts: {
     heading: 'Pacifico',
     body: 'Noto Sans JP',
+  },
+  colors: {
+    bgRoot: '#292C3D',
+    bgBox: '#34384E',
+    bgButton: '#E2C3B2',
+    bgAlt: '#2E3641',
+    text00: '#C1DBE3',
+    text01: '#CDE0BE',
+    text02: '#F6C7A2',
+    text03: '#E2C3B2',
+    text04: '#E9F3B7',
+    text05: '#D4F5F5',
+    text06: '#89A4BB',
+    text07: '#828297',
   },
 });
 
@@ -17,7 +32,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={theme} cssVarsRoot="#app">
         <App />
       </ChakraProvider>
     </BrowserRouter>
