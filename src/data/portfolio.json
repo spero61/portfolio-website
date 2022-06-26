@@ -34,7 +34,7 @@
             "cover": "/portfolio/thumbnail/six.png",
             "title": "Chatapp",
             "description": "React, Firebase, ChakraUI",
-            "url": "https://github.com/spero61/programming-principles-and-practice-using-cpp/blob/main/chapter15/README.md"
+            "url": "https://luomu-chatapp.netlify.app/"
         }
     ]
 }
