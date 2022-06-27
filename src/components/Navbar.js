@@ -22,7 +22,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 const Links = [
   {
     text: 'Top',
-    url: '#',
+    url: '/',
   },
   {
     text: 'About',
@@ -57,14 +57,17 @@ const NavLink = ({ children, url }) => (
 
 const MobileLinks = () => (
   <Flex pb={4} display={{ md: 'none' }} minHeight="30vh">
-    <Flex as="nav" spacing={5} mt={3} direction="column">
+    <Flex as="nav" direction="column" mt={1}>
       {Links.map((link) => (
         <NavLink key={`${link.text}-navLink`} url={link.url}>
           <Text
-            fontSize="20px"
+            fontSize="2rem"
             fontWeight={700}
-            mb={10}
+            color="text00"
             fontFamily="navText"
+            mt={5}
+            mb={3}
+            ml={2}
           >
             {link.text}
           </Text>
@@ -79,47 +82,66 @@ function Navbar() {
 
   return (
     <Box
-      // bgGradient="linear(to-l, pink.300, yellow.400, pink.200)"
+      bg="bgNavbar"
+      // bgGradient="linear(to-b, pink.300, yellow.200)"
       position="fixed"
       w="100%"
       top="0px"
-      sx={{ background: 'transparent', backdropFilter: 'blur(9px)' }}
+      sx={{ backdropFilter: 'blur(9px)' }}
       px={5}
+      py={3}
     >
-      <Flex h={20} alignItems="center" justifyContent="space-between">
+      <Flex h={20} alignItems="center">
+        {/* mobile only start */}
         <IconButton
+          position="absolute"
+          left="18px"
+          display={{ md: 'none' }}
           size="lg"
           color="text06"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          icon={isOpen ? <CloseIcon boxSize="2em" /> : <HamburgerIcon boxSize="2.5em" />}
           aria-label="Open Menu"
-          display={{ md: 'none' }}
           onClick={isOpen ? onClose : onOpen}
           sx={{ background: 'transparent' }}
         />
-        <Flex spacing={6} alignItems="center">
-          {isOpen ? <Image src="../assets/images/logo.png" w="20px" h="20px" /> : null}
-          <Flex
-            as="nav"
-            spacing={6}
+        <Link href="/">
+          <Image
+            src="../assets/images/logo.png"
+            w="75px"
+            h="30px"
+            position="absolute"
+            right="20px"
+            ml={2}
+            display={{ md: 'none' }}
+          />
+        </Link>
+        {/* mobile only end */}
+        <Link href="/">
+          <Image
+            src="../assets/images/logo.png"
+            w="100px"
+            h="40px"
+            ml={3}
             display={{ base: 'none', md: 'flex' }}
-            // justifyContent="space-between"
-          >
-            {Links.map((link) => (
-              <NavLink key={`${link.text}-navLink`} url={link.url}>
-                <Text
-                  mt={7}
-                  mx={10}
-                  fontSize={['15px', '15px', '15px']}
-                  fontWeight={700}
-                  fontFamily="navText"
-                  mb={10}
-                >
-                  {link.text}
-                </Text>
-              </NavLink>
-            ))}
-          </Flex>
-        </Flex>
+            onClick={{}}
+          />
+        </Link>
+        <Spacer />
+        {Links.map((link) => (
+          <NavLink key={`${link.text}-navLink`} url={link.url}>
+            <Text
+              fontSize={['16px', '17px', '18px']}
+              fontWeight={700}
+              fontFamily="navText"
+              display={{ base: 'none', md: 'flex' }}
+              mx={18}
+              color="text05"
+            >
+              {link.text}
+            </Text>
+          </NavLink>
+        ))}
+        <Box mr="5vw" />
       </Flex>
       {isOpen ? <MobileLinks /> : null}
     </Box>
