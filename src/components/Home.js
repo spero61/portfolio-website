@@ -19,7 +19,7 @@ function Home() {
   return (
     <Flex h="100vh" bg="bgRoot" direction="column">
       <Navbar />
-      <Stack py="70px" alignItems="center" overflowY="scroll" overflowX="hidden" sx={customSlideSx}>
+      <Stack py="70px" alignItems="center" overflowY="scroll" overflowX="hidden" sx={customSlideSx} spacing={10}>
         <Hero />
         <Works />
         <About />
