@@ -17,9 +17,9 @@ function Works() {
           onClick={() => setIsActive(!isActive)}
           animate={{
             rotate: isActive ? 180 : 0,
-            scale: 1.2,
+            scale: 0.8,
           }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 10 }}
         >
           <Center bg="bgBox" height="300px" borderRadius="10px" flexDirection="column">
             <Box h="90%" w="90%" p={5} bgImage="../assets/images/chatapp01.png" borderRadius="15px" />
