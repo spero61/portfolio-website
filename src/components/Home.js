@@ -6,6 +6,7 @@ import Hero from './Hero';
 import Works from './Works';
 import About from './About';
 import Contact from './Contact';
+import Footer from './Footer';
 
 // this option applies to chrome or safari
 const customSlideSx = {
@@ -23,6 +24,7 @@ function Home() {
         <Works />
         <About />
         <Contact />
+        <Footer />
       </Stack>
     </Flex>
   );
