@@ -58,7 +58,7 @@ const NavLink = ({ children, url }) => (
 );
 
 const MobileLinks = () => (
-  <Flex pb={4} display={{ md: 'none' }} minHeight="30vh">
+  <Flex pb={4} display={{ md: 'none' }} minHeight="30vh" w="90vw">
     <Flex as="nav" direction="column" mt={1}>
       {Links.map((link) => (
         <NavLink key={`${link.text}-navLink`} url={link.url}>
@@ -113,7 +113,7 @@ function Navbar() {
         <Link href="/">
           <Image
             className="navbar-logo"
-            src="../assets/images/logo.png"
+            src="../assets/images/logo.svg"
             w="75px"
             h="30px"
             position="absolute"
@@ -128,7 +128,7 @@ function Navbar() {
         <Link href="/">
           <Image
             className="navbar-logo"
-            src="../assets/images/logo.png"
+            src="../assets/images/logo.svg"
             w={['75px', '75px', '75px', '90px', '95px', '100px']}
             h={['30px', '30px', '30px', '36px', '38px', '40px']}
             ml={3}
