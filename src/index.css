@@ -17,3 +17,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Navbar.js */
+.github-icon:hover,
+.navbar-text:hover {
+  color:#D9FAFA;
+}
+
+.navbar-hamburger:hover,
+.navbar-logo:hover {
+  filter:brightness(1.2);
+}

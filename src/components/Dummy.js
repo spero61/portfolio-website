@@ -7,7 +7,7 @@ const dummyText = '「トップガン」興行収入10億ドル迫る';
 function Dummy() {
   return (
     <Stack my={5}>
-      <Flex h="450px" w="450px" direction="column" bg="bgBox" borderRadius="40px">
+      <Flex h="550px" w="550px" direction="column" bg="bgBox" borderRadius="40px">
         <Spacer />
         <Heading textAlign="center" size="3xl" color="#C1DBE3">heading</Heading>
         <br />

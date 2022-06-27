@@ -1,21 +1,28 @@
 import {
-  Center, Flex, Text, Heading, Spacer, Stack,
+  Center, Flex, Text, Heading, Spacer, Stack, IconButton, Box,
 } from '@chakra-ui/react';
 import Navbar from './Navbar';
-import Dummy from './Dummy';
+import Hero from './Hero';
+import Works from './Works';
+import About from './About';
+import Contact from './Contact';
+
+// this option applies to chrome or safari
+const customSlideSx = {
+  '&::-webkit-scrollbar': { color: 'text05', width: '6px', backgroundColor: 'bgRoot' },
+  '&::-webkit-scrollbar-thumb': { borderRadius: '5px', backgroundColor: 'text06' },
+  '::-webkit-scrollbar-thumb:hover': { background: 'text01' },
+};
 
 function Home() {
   return (
-    <Flex h="100vh" bg="bgRoot" direction="column" overflow="scroll">
+    <Flex h="100vh" bg="bgRoot" direction="column">
       <Navbar />
-      <Stack alignItems="center">
-        <Dummy id="section1" />
-        <Dummy id="section2" />
-        <Dummy id="section3" />
-        <Dummy id="section4" />
-        <Dummy id="section5" />
-        <Dummy id="section6" />
-        <Dummy id="section7" />
+      <Stack py="70px" alignItems="center" overflowY="scroll" overflowX="hidden" sx={customSlideSx}>
+        <Hero />
+        <Works />
+        <About />
+        <Contact />
       </Stack>
     </Flex>
   );
