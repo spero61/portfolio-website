@@ -25,12 +25,7 @@ function Works() {
             <Box h="90%" w="90%" p={5} bgImage="../assets/images/chatapp01.png" borderRadius="15px" />
           </Center>
         </motion.div>
-        <motion.div
-          animate={{ rotate: [0, 90, 180, 270], x: [0, 300, 0, -300, 0] }}
-          transition={{ repeat: Infinity, duration: 3 }}
-        >
-          <Box bg="text01" height="300px" borderRadius="10px" />
-        </motion.div>
+        <Box bg="text01" height="300px" borderRadius="10px" />
         <Box bg="bgBox" height="300px" borderRadius="10px" />
         <Box bg="bgBox" height="300px" borderRadius="10px" />
         <Box bg="bgBox" width="600px" height="300px" borderRadius="10px" />
