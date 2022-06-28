@@ -1,18 +1,9 @@
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
   Link,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
-  Stack,
   Image,
   Spacer,
   Text,
@@ -58,19 +49,18 @@ const NavLink = ({ children, url }) => (
 );
 
 const MobileLinks = () => (
-  <Flex pb={4} display={{ md: 'none' }} minHeight="30vh" w="90vw">
-    <Flex as="nav" direction="column" mt={1}>
+  <Flex display={{ md: 'none' }}>
+    <Flex as="nav" direction="column" mt={10}>
       {Links.map((link) => (
         <NavLink key={`${link.text}-navLink`} url={link.url}>
           <Text
             className="navbar-text"
-            fontSize="2rem"
+            fontSize="1.2rem"
             fontWeight={700}
             color="text00"
             fontFamily="navText"
-            mt={5}
+            mt={2}
             mb={3}
-            ml={2}
           >
             {link.text}
           </Text>
@@ -86,25 +76,23 @@ function Navbar() {
   return (
     <Box
       bg="bgColor"
-      // bgGradient="linear(to-b, pink.300, yellow.200)"
       position="fixed"
       w="98%"
-      top="0px"
       sx={{ backdropFilter: 'blur(9px)' }}
-      px={5}
-      py={1}
+      px={4}
+      pt={1}
     >
-      <Flex h={20} alignItems="center">
-
+      <Flex alignItems="center">
         {/* mobile only start */}
         <IconButton
           className="navbar-hamburger"
           position="absolute"
-          left="18px"
+          top="10px"
+          left="15px"
           display={{ md: 'none' }}
-          size="lg"
+          size="sm"
           color="text06"
-          icon={isOpen ? <CloseIcon boxSize="2em" /> : <HamburgerIcon boxSize="2.5em" />}
+          icon={isOpen ? <CloseIcon boxSize="1.5em" /> : <HamburgerIcon boxSize="1.8em" />}
           aria-label="Open Menu"
           onClick={isOpen ? onClose : onOpen}
           sx={{ background: 'transparent' }}
@@ -117,21 +105,18 @@ function Navbar() {
             w="75px"
             h="30px"
             position="absolute"
-            top="12px"
-            right="20px"
-            ml={2}
+            top="9px"
+            right="12px"
             display={{ md: 'none' }}
           />
         </Link>
         {/* mobile only end */}
-
         <Link href="/">
           <Image
             className="navbar-logo"
             src="../assets/images/logo.svg"
             w={['75px', '75px', '75px', '90px', '95px', '100px']}
             h={['30px', '30px', '30px', '36px', '38px', '40px']}
-            ml={3}
             display={{ base: 'none', md: 'flex' }}
           />
         </Link>
@@ -140,7 +125,7 @@ function Navbar() {
           <NavLink key={`${link.text}-navLink`} url={link.url}>
             <Text
               className="navbar-text"
-              fontSize={['12px', '12px', '14px', '15px', '16px', '18px']}
+              fontSize={['11px', '12px', '15px']}
               fontWeight={500}
               fontFamily="navText"
               display={{ base: 'none', md: 'flex' }}
@@ -156,7 +141,7 @@ function Navbar() {
             <FontAwesomeIcon className="github-icon" icon={faGithub} color="#97B4BD" size="2xl" />
           </Link>
         </Box>
-        <Box mr={7} />
+        <Box mr={0} />
       </Flex>
       {isOpen ? <MobileLinks /> : null}
     </Box>

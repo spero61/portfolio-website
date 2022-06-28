@@ -1,6 +1,4 @@
-import {
-  Center, Flex, Text, Heading, Spacer, Stack, IconButton, Box,
-} from '@chakra-ui/react';
+import { Flex, Stack } from '@chakra-ui/react';
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Works from './Works';
@@ -21,8 +19,8 @@ function Home() {
       <Navbar />
       <Stack py="70px" alignItems="center" overflowY="scroll" overflowX="hidden" sx={customSlideSx} spacing={10}>
         <Hero />
-        <Works />
         <About />
+        <Works />
         <Contact />
         <Footer />
       </Stack>
