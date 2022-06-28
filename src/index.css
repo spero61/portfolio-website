@@ -3,17 +3,9 @@
 /* @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-html {
-  font-size: 62.5%;
-}
 
 body {
   margin: 0;
-  font: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
-  color: #444;
-  background: #022c43;
-  overflow: hidden;
-  display:block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,4 +19,55 @@ body {
 .navbar-hamburger:hover,
 .navbar-logo:hover {
   filter:brightness(1.2);
+}
+
+
+/* <div className="applicant-svg">
+{/* //     <Image
+//     mt={[0, 0, 3, 4, 5, 5]}
+//     className="applicant-svg"
+//     w={['0%', '10%', '70%', '85%', '90%', '95%']}
+//     src="../assets/images/applicant.svg"
+//     alt="handwriting applicant svg"
+//   /> */
+
+/* chakra-ui breakpoints
+  (they use @media(min-width) internally)
+  sm: '30em', 480px   mobile
+  md: '48em', 768px   mobile
+  lg: '62em', 992px   tablet, laptop
+  xl: '80em', 1280px  desktop (magnified)
+  2xl: '96em', 1536px fhd, qhd (default environment)
+  above: < 1537px     4k
+  e.g.,
+  props={[sm, md, lg, xl, 2xl, above]}
+} */
+
+
+/* sm */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* md */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* lg */
+@media only screen and (min-width: 992px) {
+  .applicant-svg-desktop {
+    width: 70%;
+  }
+}
+
+/* xl and above */
+@media only screen and (min-width: 1280px) {
+  #applicant-svg-desktop {
+    width: 85%;
+  }
+}
+
+#applicant-svg-desktop {
+  width: 100%;
 }
