@@ -21,16 +21,6 @@ body {
   filter:brightness(1.2);
 }
 
-
-/* <div className="applicant-svg">
-{/* //     <Image
-//     mt={[0, 0, 3, 4, 5, 5]}
-//     className="applicant-svg"
-//     w={['0%', '10%', '70%', '85%', '90%', '95%']}
-//     src="../assets/images/applicant.svg"
-//     alt="handwriting applicant svg"
-//   /> */
-
 /* chakra-ui breakpoints
   (they use @media(min-width) internally)
   sm: '30em', 480px   mobile

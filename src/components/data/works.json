@@ -1,0 +1,40 @@
+{
+    "portfolio": [
+        {
+            "cover": "../assets/images/chatapp01.png",
+            "title": "BuyangPL.com",
+            "description": "nginx, node.js, SSL(TLS)",
+            "url": "https://www.buyangpl.com"
+        },
+        {
+            "cover": "../assets/images/chatapp01.png",
+            "title": "Finantial-portfolio",
+            "description": "Python, Flask, SQLite3, Chart.js",
+            "url": "http://ec2-3-35-215-235.ap-northeast-2.compute.amazonaws.com/"
+        },
+        {
+            "cover": "/portfolio/thumbnail/three.gif",
+            "title": "Falling from the sky",
+            "description": "Lua, Love2d, love.js",
+            "url": "https://www.spero61.xyz"
+        },
+        {
+            "cover": "/portfolio/thumbnail/four.gif",
+            "title": "Calendar Generator",
+            "description": "Python, openpyxl",
+            "url": "https://github.com/spero61/hodgepodge"
+        },
+        {
+            "cover": "/portfolio/thumbnail/five.png",
+            "title": "Graphing Functions and Data",
+            "description": "C++, FLTK 1.3.6",
+            "url": "https://github.com/spero61/programming-principles-and-practice-using-cpp/blob/main/chapter15/README.md"
+        },
+        {
+            "cover": "/portfolio/thumbnail/six.png",
+            "title": "Chatapp",
+            "description": "React, Firebase, ChakraUI",
+            "url": "https://github.com/spero61/programming-principles-and-practice-using-cpp/blob/main/chapter15/README.md"
+        }
+    ]
+}
