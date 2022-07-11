@@ -1,0 +1,46 @@
+{
+    "portfolio": [
+        {
+            "cover": "../assets/images/next-blog.png",
+            "title": "Spero61 Blog",
+            "description": "Next.js, TailwindCSS, Firebase",
+            "url": "https://spero61-next-blog.vercel.app/"
+        },
+        {
+            "cover": "../assets/images/luomu-chat-app.png",
+            "title": "Luomu Chat App",
+            "description": "React, ChakraUI, Firebase",
+            "url": "https://luomu-chatapp.netlify.app/"
+        },
+        {
+            "cover": "../assets/images/financial-portfolio.gif",
+            "title": "Finantial-portfolio",
+            "description": "Python, Flask, SQLite3, Chart.js",
+            "url": "https://www.spero61.click/"
+        },
+        {
+            "cover": "../assets/images/falling-from-the-sky.gif",
+            "title": "Falling from the sky",
+            "description": "Lua, Love2d, love.js",
+            "url": "https://www.spero61.xyz"
+        },
+        {
+            "cover": "../assets/images/calendar-2023-small.gif",
+            "title": "Calendar Generator",
+            "description": "Python, openpyxl",
+            "url": "https://github.com/spero61/hodgepodge"
+        },
+        {
+            "cover": "../assets/images/graphing-data.png",
+            "title": "Graphing Data",
+            "description": "C++, FLTK 1.3.6",
+            "url": "https://github.com/spero61/programming-principles-and-practice-using-cpp/blob/main/chapter15/README.md"
+        },
+        {
+            "cover": "../assets/images/kanji-study.png",
+            "title": "Kanji study",
+            "description": "HTML, CSS, JavaScript",
+            "url": "http://www.spero61.xyz"
+        }
+    ]
+}

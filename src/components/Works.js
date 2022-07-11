@@ -1,38 +1,110 @@
 import {
-  Text, Heading, Spacer, Stack, Flex, SimpleGrid, Box, Image, Center,
+  Text, Heading, Spacer, Stack, Flex, SimpleGrid, Box, Image, Center, Button,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import worksData from './data/works.json';
 
-const dummyText = 'This is Works section';
+const onScrollView = {
+  hidden: { x: -150, opacity: 0 },
+  hiddenImage: { y: -50, opacity: 0 },
+  bouncingImage: {
+    y: [50, -25, 0],
+    opacity: 1,
+    rotate: [15, 10, 15],
+    transition: {
+      type: 'spring',
+      bounce: 1,
+      duration: 0.7,
+    },
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    rotate: [0, 5, 0],
+    transition: {
+      type: 'spring',
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+};
+
+const renderPortfolio = (portfolio) => (
+  <>
+    {portfolio.map((elem, index) => (
+      <Box
+        as={motion.div}
+        bg="bgBox"
+        height={['200px', '230px', '280px']}
+        borderRadius="10px"
+        key={`${index}${elem.title}`}
+        className="work-content"
+      >
+        <Flex
+          as={motion.div}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.7 }}
+          transition={{ staggerChildren: 0.2 }}
+          alignItems="end"
+        >
+          <Image
+            w="130px"
+            h="240px"
+            ml={7}
+            mb={4}
+            borderRadius={8}
+            as={motion.img}
+            src={`${process.env.PUBLIC_URL}${elem.cover}`}
+            alt={`${elem.title}-image`}
+            initial="hiddenImage"
+            whileInView="bouncingImage"
+            viewport={{ once: true, amount: 0.7 }}
+            variants={onScrollView}
+          />
+          <Spacer />
+          <Flex
+            as={motion.div}
+            mr={5}
+            initial="hidden"
+            whileInView="visible"
+            direction="column"
+            viewport={{ once: true, amount: 0.7 }}
+            transition={{ staggerChildren: 0.2 }}
+            alignItems="end"
+          >
+            <Text mt={1} fontSize={['1.6rem', '1.8rem', '2rem']} as={motion.p} color="text05" fontWeight={700} variants={onScrollView}>
+              {elem.title}
+            </Text>
+            <Text mb={1} as={motion.p} fontSize={['0.9rem', '1rem', '1rem']} color="text02" variants={onScrollView}>
+              {elem.description}
+            </Text>
+            <Button
+              as={motion.button}
+              my={1}
+              type="button"
+              onClick={() => window.open(elem.url)}
+              variants={onScrollView}
+            >
+              View
+            </Button>
+          </Flex>
+        </Flex>
+      </Box>
+    ))}
+  </>
+);
 
 function Works() {
-  const [isActive, setIsActive] = useState(false);
-
   return (
-    <Box w="85vw" maxWidth="1000px">
-      <SimpleGrid minChildWidth="300px" spacingX="35px" spacingY="35px">
-        <motion.div
-          className="block"
-          onClick={() => setIsActive(!isActive)}
-          animate={{
-            rotate: isActive ? 180 : 0,
-            scale: 0.8,
-          }}
-          transition={{ duration: 10 }}
-        >
-          <Center bg="bgBox" height="300px" borderRadius="10px" flexDirection="column">
-            <Box h="90%" w="90%" p={5} bgImage="../assets/images/chatapp01.png" borderRadius="15px" />
-          </Center>
-        </motion.div>
-        <Box bg="text01" height="300px" borderRadius="10px" />
-        <Box bg="bgBox" height="300px" borderRadius="10px" />
-        <Box bg="bgBox" height="300px" borderRadius="10px" />
-        <Box bg="bgBox" width="600px" height="300px" borderRadius="10px" />
-        <Box bg="bgBox" height="300px" borderRadius="10px" />
-        <Box bg="bgBox" width="600px" height="300px" borderRadius="10px" />
-        <Box bg="bgBox" height="300px" borderRadius="10px" />
-        <Box bg="bgBox" height="300px" borderRadius="10px" />
+    <Box w="85vw" maxWidth="1200px">
+      <SimpleGrid
+        minChildWidth={['300px', '300px', '450px']}
+        spacingX="40px"
+        spacingY={['50px', '60px', '80px']}
+        mt={10}
+      >
+        {renderPortfolio(worksData.portfolio)}
       </SimpleGrid>
     </Box>
   );
