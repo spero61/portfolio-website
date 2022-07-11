@@ -34,11 +34,11 @@ function About() {
               <Spacer />
               <Heading textAlign="center" size={['xl', 'xl', '2xl']} color="#C1DBE3">Tech Stack</Heading>
               <br />
-              <Text fontSize={['1.2rem', '1.6rem', '1.8rem']} textAlign="center" color="text00">JavaScript</Text>
-              <Text fontSize={['1.2rem', '1.6rem', '1.8rem']} textAlign="center" color="text01">React, Next.js</Text>
-              <Text fontSize={['1.2rem', '1.6rem', '1.8rem']} textAlign="center" color="text02">Python, Flask</Text>
-              <Text fontSize={['1.2rem', '1.6rem', '1.8rem']} textAlign="center" color="text03">ChakraUI, TailwindCSS</Text>
-              <Text fontSize={['1.2rem', '1.6rem', '1.8rem']} textAlign="center" color="text04">Framer Motion</Text>
+              <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text00">JavaScript</Text>
+              <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text01">React, Next.js</Text>
+              <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text02">Python, Flask</Text>
+              <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text03">ChakraUI, TailwindCSS</Text>
+              <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text04">Framer Motion</Text>
               <Spacer />
             </Flex>
             <Spacer />

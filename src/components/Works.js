@@ -46,12 +46,14 @@ const renderPortfolio = (portfolio) => (
           whileInView="visible"
           viewport={{ once: true, amount: 0.7 }}
           transition={{ staggerChildren: 0.2 }}
+          alignItems="end"
         >
           <Image
-            w="120px"
-            h="220px"
-            ml={5}
-            mb={3}
+            w="130px"
+            h="240px"
+            ml={7}
+            mb={4}
+            borderRadius={8}
             as={motion.img}
             src={`${process.env.PUBLIC_URL}${elem.cover}`}
             alt={`${elem.title}-image`}
@@ -60,20 +62,33 @@ const renderPortfolio = (portfolio) => (
             viewport={{ once: true, amount: 0.7 }}
             variants={onScrollView}
           />
-          <Text as={motion.p} color="text04" variants={onScrollView}>
-            {elem.title}
-          </Text>
-          <Text as={motion.p} color="text02" variants={onScrollView}>
-            {elem.description}
-          </Text>
-          <Button
-            as={motion.button}
-            type="button"
-            onClick={() => window.open(elem.url)}
-            variants={onScrollView}
+          <Spacer />
+          <Flex
+            as={motion.div}
+            mr={5}
+            initial="hidden"
+            whileInView="visible"
+            direction="column"
+            viewport={{ once: true, amount: 0.7 }}
+            transition={{ staggerChildren: 0.2 }}
+            alignItems="end"
           >
-            View
-          </Button>
+            <Text mt={1} fontSize={['1.6rem', '1.8rem', '2rem']} as={motion.p} color="text05" fontWeight={700} variants={onScrollView}>
+              {elem.title}
+            </Text>
+            <Text mb={1} as={motion.p} fontSize={['0.9rem', '1rem', '1rem']} color="text02" variants={onScrollView}>
+              {elem.description}
+            </Text>
+            <Button
+              as={motion.button}
+              my={1}
+              type="button"
+              onClick={() => window.open(elem.url)}
+              variants={onScrollView}
+            >
+              View
+            </Button>
+          </Flex>
         </Flex>
       </Box>
     ))}

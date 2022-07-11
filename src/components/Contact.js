@@ -7,7 +7,7 @@ const dummyText = 'This is Contact section';
 function Contact() {
   return (
     <Stack my={5}>
-      <Flex h="300px" w="85vw" direction="column" bg="bgBox" borderRadius="40px">
+      <Flex h="300px" w="80vw" direction="column" bg="bgBox" borderRadius="40px">
         <Spacer />
         <Heading textAlign="center" size="3xl" color="#C1DBE3">Contact</Heading>
         <br />

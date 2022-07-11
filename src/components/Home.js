@@ -51,7 +51,7 @@ function Home() {
         <About />
         <Works />
         {/* <Contact /> */}
-        {/* <Footer /> */}
+        <Footer />
       </Stack>
     </Flex>
   );
