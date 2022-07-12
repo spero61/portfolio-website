@@ -19,6 +19,9 @@ const onScrollView = {
 };
 
 function About() {
+  const aboutText = `Java, Springを学ぶIT教育を受けてからWEBエンジニアを目指し、プログラミングに必要な基礎を固めるためコンピューターサイエンス(CS)の勉強いたしました。
+  `;
+
   return (
     <Stack my={5}>
       <motion.div
@@ -29,16 +32,15 @@ function About() {
         variants={onScrollView}
       >
         <motion.div className="about-container" variants={onScrollView}>
-          <Flex h="400px" w="85vw" maxWidth="800px" bg="bgBox" borderRadius="40px">
-            <Flex direction="column" ml={10} px={10}>
+          <Flex h={['340px', '370px', '400px']} w="85vw" maxWidth="800px" bg="bgBox" borderRadius="40px">
+            <Flex direction="column" ml={['4', '9', '10']} px={10}>
               <Spacer />
               <Heading textAlign="center" size={['xl', 'xl', '2xl']} color="#C1DBE3">Tech Stack</Heading>
-              <br />
-              <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text00">JavaScript</Text>
+              <Text mt={['2', '3', '4']} fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text04">JavaScript</Text>
               <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text01">React, Next.js</Text>
               <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text02">Python, Flask</Text>
               <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text03">ChakraUI, TailwindCSS</Text>
-              <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text04">Framer Motion</Text>
+              <Text mt={3} px={['0', '0', '80px']} fontSize={['0.8rem', '0.9rem', '1.2rem']} textAlign="left" color="text07">{aboutText}</Text>
               <Spacer />
             </Flex>
             <Spacer />
