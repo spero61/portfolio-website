@@ -3,6 +3,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import SpinCube from './SpinCube';
+import ModalButton from './ModalButton';
 
 const onScrollView = {
   hidden: { x: -150, opacity: 0 },
@@ -19,11 +20,13 @@ const onScrollView = {
 };
 
 function About() {
-  const aboutText = `Java, Springを学ぶIT教育を受けてからWEBエンジニアを目指し、プログラミングに必要な基礎を固めるためコンピューターサイエンス(CS)の勉強いたしました。
-  `;
+  const aboutText = 'Java, Springを学ぶIT教育を受けてからWEBエンジニアを目指し、プログラミングに必要な基礎を固めるためコンピューター科学(CS)の勉強いたしました。';
+  const cs50Text = 'その一環としてCS50というオープンコースを修了いたしました。コースの内容に関しましてはCS50ホームページのSyllabusにてご確認いただければ幸いです。';
+  const cs50Link = 'https://cs50.harvard.edu/x/2022/syllabus/';
+  const linkButtonText = 'Check CS50 Syllabus';
 
   return (
-    <Stack my={5}>
+    <Stack my={5} id="about">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -40,7 +43,14 @@ function About() {
               <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text01">React, Next.js</Text>
               <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text02">Python, Flask</Text>
               <Text fontSize={['1.2rem', '1.6rem', '1.6rem']} textAlign="center" color="text03">ChakraUI, TailwindCSS</Text>
-              <Text mt={3} px={['0', '0', '80px']} fontSize={['0.8rem', '0.9rem', '1.2rem']} textAlign="left" color="text07">{aboutText}</Text>
+              <Center mt={3}>
+                <ModalButton
+                  text={aboutText}
+                  text2={cs50Text}
+                  url={cs50Link}
+                  linkButtonText={linkButtonText}
+                />
+              </Center>
               <Spacer />
             </Flex>
             <Spacer />

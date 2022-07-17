@@ -2,7 +2,7 @@ import {
   Text, Heading, Spacer, Stack, Flex, Box, Center, Image, Link,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import ApplicantSvg from './motionSvg/ApplicantSvg';
+import ApplicantSvg from './motion/ApplicantSvg';
 
 // note: hero section would be simplified
 // after getting an offer, hopefully,
@@ -86,9 +86,9 @@ function Hero() {
             </Flex>
           </Box>
           <Box py={3} />
-          <Link href="https://github.com/spero61/portfolio-website" _hover={{ textDecoration: 'none' }} isExternal>
+          <Link href="https://github.com/spero61" _hover={{ textDecoration: 'none' }} isExternal>
             <Center w="110px" h="35px" border="1px solid" borderColor="text00" _hover={{ bg: 'bgBox', filter: 'brightness(1.2)' }}>
-              <Text fontSize="0.9rem" textAlign="center" color="text01" mb={1}>view works</Text>
+              <Text fontSize="0.9rem" textAlign="center" color="text01" mb={1}>GitHub page</Text>
             </Center>
           </Link>
         </Box>

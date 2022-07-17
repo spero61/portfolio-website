@@ -103,7 +103,7 @@ const renderPortfolio = (portfolio) => (
 
 function Works() {
   return (
-    <Box w="85vw" maxWidth="1200px">
+    <Box id="works" w="85vw" maxWidth="1200px">
       <SimpleGrid
         minChildWidth={['300px', '300px', '450px']}
         spacingX="40px"

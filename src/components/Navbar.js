@@ -1,12 +1,5 @@
 import {
-  Box,
-  Flex,
-  Link,
-  IconButton,
-  useDisclosure,
-  Image,
-  Spacer,
-  Text,
+  Box, Flex, Link, IconButton, useDisclosure, Image, Spacer, Text,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,16 +11,16 @@ const Links = [
     url: '/',
   },
   {
-    text: 'Works',
-    url: 'https://www.spero61.click/',
+    text: 'About',
+    url: '#about',
   },
   {
-    text: 'About',
-    url: 'https://www.spero61.me',
+    text: 'Works',
+    url: '#works',
   },
   {
     text: 'Contact',
-    url: 'https://ffts.spero61.sbs',
+    url: 'mailto:yorusung@yahoo.co.jp',
   },
 ];
 
